@@ -13,4 +13,9 @@
 #
 ---
 include:
-  - board: ferris_rev02
+  - board: seeeduino_xiao_ble
+    shield: kpukboard_left
+  - board: seeeduino_xiao_ble
+    shield: kpukboard_right
+  - board: seeeduino_xiao_ble
+    shield: settings_reset

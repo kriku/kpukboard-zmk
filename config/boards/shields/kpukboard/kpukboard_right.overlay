@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "kpukboard.dtsi"
+
+&default_transform {
+    col-offset = <5>;
+};
+
+&kscan0 {
+    col-gpios
+        = <&xiao_d 6 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 3 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 2 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 1 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 0 GPIO_ACTIVE_HIGH>
+        ;
+
+};

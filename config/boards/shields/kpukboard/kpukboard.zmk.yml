@@ -1,0 +1,11 @@
+file_format: "1"
+id: kpukboard
+name: kpukboard
+type: shield
+url: https://github.com/kriku/kpukboard-zmk
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - kpukboard_left
+  - kpukboard_right

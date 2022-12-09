@@ -1,0 +1,5 @@
+config SHIELD_KPUK_LEFT
+    def_bool $(shields_list_contains,kpukboard_left)
+
+config SHIELD_KPUK_RIGHT
+    def_bool $(shields_list_contains,kpukboard_right)
