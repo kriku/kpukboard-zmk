@@ -70,9 +70,9 @@
 
         default_layer {
             bindings = <
-                &kp Q         &kp W      &kp E       &kp R   &kp T         &kp Y            &kp U          &kp I       &kp O      &kp P
-                &hm LCTRL A   &hm LALT S &hm LGUI D  &kp F   &kp G         &kp H            &tdj           &hm RGUI K  &hm RALT L &hm RCTRL SEMI
-                &tdz          &kp X      &kp C       &kp V   &kp B         &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH
+                &kp Q   &kp W        &kp E       &kp R       &kp T         &kp Y            &kp U          &kp I            &kp O           &kp P
+                &kp A   &kp S        &kp D       &kp F       &kp G         &kp H            &tdj           &kp K            &kp L           &kp SEMI
+                &tdz    &ht LCTRL X  &ht LGUI C  &ht LALT V  &kp B         &kp N            &ht RALT M     &ht RGUI COMMA   &ht RCTRL DOT   &kp FSLH
                                 &lt NUM_L TAB  &ht LSHFT SPACE           &ht RSHFT ENTER  &lt SYM_L BKSP
                 >;
         };
@@ -89,9 +89,9 @@
 
         sym_layer {
             bindings = <
-                &kp MINUS        &kp EQUAL       &kp LS(MINUS)    &kp LS(PLUS) &kp RBRC      &kp STAR  &kp LS(N7)  &kp UARW    &kp LS(BSLH)  &kp LS(N6)
-                &hm LCTRL LS(W)  &hm LALT LS(E)  &hm LGUI LS(N9)  &kp LS(N0)   &kp RBKT      &kp QUOT  &kp LARW    &kp DARW    &kp RARW      &kp LS(QUOT)
-                &kp TILDE        &kp LS(N1)      &kp LS(N2)       &kp LS(N3)   &kp BSLH      &kp LBKT  &kp LS(N4)  &kp LS(N5)  &kp LBRC      &trans
+                &kp MINUS        &kp EQUAL         &kp LS(MINUS)    &kp LS(PLUS)     &kp RBRC      &kp STAR  &kp LS(N7)       &kp UARW         &kp LS(BSLH)     &kp LS(N6)
+                &kp LS(W)        &kp LS(E)         &kp LS(N9)       &kp LS(N0)       &kp RBKT      &kp QUOT  &kp LARW         &kp DARW         &kp RARW         &kp LS(QUOT)
+                &kp TILDE        &ht LCTRL LS(N1)  &ht LGUI LS(N2)  &ht LALT LS(N3)  &kp BSLH      &kp LBKT  &ht RALT LS(N4)  &ht RGUI LS(N5)  &ht RCTRL LBRC   &trans
                                                                         &trans &trans        &bootloader &trans
             >;
         };
