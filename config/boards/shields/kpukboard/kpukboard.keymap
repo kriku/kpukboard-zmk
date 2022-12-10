@@ -61,9 +61,11 @@
  */
         sym_layer {
             bindings = <
-                &kp MINUS      &kp PLUS     &kp LS(MINUS)  &kp LS(PLUS) &kp STAR     &kp STAR  &kp LS(N7)  &kp UARW    &kp LS(BSLH)  &LS(N6)
-                &kp LS(W)      &kp LS(E)    &kp LS(N9)     &kp LS(N0)   &kp RBRC     &kp QUOT  &kp LARW    &kp DARW    &kp RARW      &LS(QUOT)
-                &kp TILDE      &kp LS(N1)   &kp LS(N2)     &kp LS(N3)   &kp BSLH     &kp LBRC  &kp LS(N4)  &kp LS(N5)  &kp LS(LBRC)  &trans
+                &kp MINUS      &kp PLUS     &kp LS(MINUS)  &kp LS(PLUS) &kp STAR      &kp STAR  &kp LS(N7)  &kp UARW    &kp LS(BSLH)  &kp LS(N6)
+
+                &kp LS(W)      &kp LS(E)    &kp LS(N9)     &kp LS(N0)   &kp RBKT      &kp QUOT  &kp LARW    &kp DARW    &kp RARW      &kp LS(QUOT)
+
+                &kp TILDE      &kp LS(N1)   &kp LS(N2)     &kp LS(N3)   &kp BSLH      &kp LBKT  &kp LS(N4)  &kp LS(N5)  &kp LS(LBRC)  &trans
                                                                     &trans &trans     &trans &trans
             >;
         };
