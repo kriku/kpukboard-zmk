@@ -11,9 +11,10 @@
 #define DEF_L 0
 #define SYM_L 1
 #define NUM_L 2
+#define FUN_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
-&lt { quick_tap_ms = <200>; };
+// &lt { quick_tap_ms = <-1>; };
 
 / {
     behaviors {
@@ -59,9 +60,13 @@
 
 
 /*
+ *   dvorak
+ *
  *   ' , . p y   f g c r l   |
  *   a o e u i   d h t n s   |
  *   ; q j k x   b m w v z   |
+ *
+ *   йцукен
  *
  *   й ц у к е   н г ш щ з   |
  *   ф ы в а п   р о л д ж   |
@@ -78,37 +83,56 @@
         };
 
 /*
+ *   dvorak
+ *
  *   [ ] { } +   * & a | ^   |
  *   < > ( ) =   - a a a _   |
- *   ~ ! @ # \   / $ % ? .   |
+ *   ~ ! @ # \   / $ % ? 3   |
+ *
+ *   йцукен
  *
  *   [ ] { } +   * ? а / :   |
  *   Ц У ( ) ъ   э а а а Э   |
- *   Ë ! " № \   х ; % Х .   |
+ *   Ë ! " № \   х ; % Х 3   |
  */
 
         sym_layer {
             bindings = <
                 &kp MINUS        &kp EQUAL         &kp LS(MINUS)    &kp LS(PLUS)     &kp RBRC      &kp STAR  &kp LS(N7)       &kp UARW         &kp LS(BSLH)     &kp LS(N6)
                 &kp LS(W)        &kp LS(E)         &kp LS(N9)       &kp LS(N0)       &kp RBKT      &kp QUOT  &kp LARW         &kp DARW         &kp RARW         &kp LS(QUOT)
-                &kp TILDE        &ht LCTRL LS(N1)  &ht LGUI LS(N2)  &ht LALT LS(N3)  &kp BSLH      &kp LBKT  &ht RALT LS(N4)  &ht RGUI LS(N5)  &ht RCTRL LBRC   &trans
+                &kp TILDE        &ht LCTRL LS(N1)  &ht LGUI LS(N2)  &ht LALT LS(N3)  &kp BSLH      &kp LBKT  &ht RALT LS(N4)  &ht RGUI LS(N5)  &ht RCTRL LBRC   &tog FUN_L
                                                                         &trans &trans        &bootloader &trans
             >;
         };
 
 /*
  *     ALT +
- *   b 7 8 9 +   * 7 8 9 %   |
- *   b 4 5 6 =   - 4 5 6 0   |
- *   b 1 2 3 \   / 1 2 3 .   |
+ *   v 7 8 9 +   * 7 8 9 %   |
+ *   v 4 5 6 =   - 4 5 6 0   |
+ *   v 1 2 3 \   / 1 2 3 .   |
  */
 
         num_layer {
             bindings = <
-                &bt BT_SEL 0  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)   &kp KP_PLUS           &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp LS(N5)
-                &bt BT_SEL 1  &kp LA(N4)  &kp LA(N5)  &kp LA(N6)   &kp KP_EQUAL          &kp KP_MINUS     &kp N4  &kp N5  &kp N6  &kp N0
-                &bt BT_CLR    &kp LA(N1)  &kp LA(N2)  &kp LA(N3)   &kp BSLH              &kp KP_SLASH     &kp N1  &kp N2  &kp N3  &kp KP_DOT
+                &kp C_VOL_UP  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)   &kp KP_PLUS           &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp LS(N5)
+                &kp C_VOL_DN  &kp LA(N4)  &kp LA(N5)  &kp LA(N6)   &kp KP_EQUAL          &kp KP_MINUS     &kp N4  &kp N5  &kp N6  &kp N0
+                &kp C_MUTE    &kp LA(N1)  &kp LA(N2)  &kp LA(N3)   &kp BSLH              &kp KP_SLASH     &kp N1  &kp N2  &kp N3  &kp KP_DOT
                                                             &trans &bootloader           &trans &trans
+            >;
+        };
+
+/*     F F F F
+ *   b 7 8 9 2   v u a d x   |
+ *   b 4 5 6 1   v a a a x   |
+ *   b 1 2 3 0   m p p n 3   |
+ */
+
+        fn_layer {
+            bindings = <
+                &bt BT_SEL 0  &kp F7  &kp F8  &kp F9   &kp F12          &kp C_VOL_UP    &kp PG_UP   &kp UARW  &kp PG_DN   &trans
+                &bt BT_SEL 1  &kp F4  &kp F5  &kp F6   &kp F11          &kp C_VOL_DN    &kp LARW    &kp DARW  &kp RARW    &trans
+                &bt BT_CLR    &kp F1  &kp F2  &kp F3   &kp F10          &kp C_MUTE      &kp C_PREV  &kp C_PP  &kp C_NEXT  &tog FUN_L
+                                        &trans &trans                      &trans &trans
             >;
         };
 
