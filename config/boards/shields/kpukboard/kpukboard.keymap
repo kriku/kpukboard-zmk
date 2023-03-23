@@ -36,14 +36,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        tdz: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <215>;
-            bindings = <&kp Z>, <&kp GRAVE>;
-        };
-
         tdj: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_1";
@@ -62,25 +54,26 @@
 /*
  *   dvorak
  *
- *   = ' , . p y   f g c r l /   |
- *   ` a o e u i   d h t n s -   |
+ *   ` ' , . p y   f g c r l /   |
+ *   = a o e u i   d h t n s -   |
  *     ; q j k x   b m w v z     |
  *
  *   йцукен
  *
- *   ъ й ц у к е   н г ш щ з х   |
- *   ё ф ы в а п   р о л д ж э   |
+ *   ё й ц у к е   н г ш щ з х   |
+ *   ъ ф ы в а п   р о л д ж э   |
  *     я ч с м и   т ь б ю .     |
  */
 
         default_layer {
             bindings = <
-                &kp RBKT  &kp Q   &kp W        &kp E       &kp R       &kp T         &kp Y            &kp U          &kp I            &kp O           &kp P     &kp LBKT
-                &kp GRAVE &kp A   &kp S        &kp D       &kp F       &kp G         &kp H            &tdj           &kp K            &kp L           &kp SEMI  &kp QUOT
-                          &tdz    &hm LCTRL X  &hm LGUI C  &hm LALT V  &kp B         &kp N            &hm LALT M     &hm RGUI COMMA   &hm RCTRL DOT   &kp FSLH
+                &kp GRAVE &kp Q   &kp W        &kp E       &kp R       &kp T         &kp Y            &kp U          &kp I            &kp O           &kp P     &kp LBKT
+                &kp RBKT  &kp A   &kp S        &kp D       &kp F       &kp G         &kp H            &tdj           &kp K            &kp L           &kp SEMI  &kp QUOT
+                          &kp Z   &hm LCTRL X  &hm LGUI C  &hm LALT V  &kp B         &kp N            &hm LALT M     &hm RGUI COMMA   &hm RCTRL DOT   &kp FSLH
                                             &lt NUM_L TAB  &ht LSHFT SPACE           &ht RSHFT ENTER  &lt SYM_L BKSP
                 >;
         };
+
 
 /*
  *   dvorak
