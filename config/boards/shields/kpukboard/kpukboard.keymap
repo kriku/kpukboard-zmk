@@ -27,7 +27,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        hm: hold_tap_mods_standard {
+        hm: home_row_tap_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_TAP_PREF";
             #binding-cells = <2>;
