@@ -32,6 +32,9 @@ https://github.com/kriku/kpukboard-pcb
     . [ ] { } +   * ? а / : .
     . Ц У ( ) ъ   э а а а Э .
       Ë ! " № \   х ; % Х 3
+
+a - means arrow
+. - means transparent
 ```
 
 ### NUMBER
@@ -44,9 +47,12 @@ https://github.com/kriku/kpukboard-pcb
 
 ### FUNCTIONAL
 ```
-    F F F F
+        F F F F
     . b 7 8 9 2   v u a d x .
     . b 4 5 6 1   v a a a x .
       b 1 2 3 0   m p p n 3
+
+b - means bluetooth behavior
+numbers - F1, F2, etc
 ```
 
