@@ -40,9 +40,11 @@ a - means arrow
 ### NUMBER
 ```
     ALT +
-    . v 7 8 9 +   * 7 8 9 % .
-    . v 4 5 6 =   - 4 5 6 0 .
-      v 1 2 3 \   / 1 2 3 .
+    . s 7 8 9 +   * 7 8 9 % .
+    . s 4 5 6 =   - 4 5 6 0 .
+      s 1 2 3 \   / 1 2 3 .
+
+s - means scene selection (CTRL+ALT+GUI+F1/F2/F3)
 ```
 
 ### FUNCTIONAL
@@ -56,3 +58,13 @@ b - means bluetooth behavior
 numbers - F1, F2, etc
 ```
 
+### STREAMING
+```
+        F F F F
+    . b 7 8 9 2   v u a d x .
+    . b 4 5 6 1   v a a a x .
+      b 1 2 3 0   m p p n 3
+
+b - means bluetooth behavior
+numbers - F1, F2, etc
+```

@@ -107,9 +107,9 @@
 
         num_layer {
             bindings = <
-                &trans &kp C_VOL_UP  &kp LA(N7)        &kp LA(N8)        &kp LA(N9)        &kp KP_PLUS           &kp KP_MULTIPLY  &kp N7       &kp N8       &kp N9        &kp LS(N5) &trans
-                &trans &kp C_VOL_DN  &kp LA(N4)        &kp LA(N5)        &kp LA(N6)        &kp KP_EQUAL          &kp KP_MINUS     &kp N4       &kp N5       &kp N6        &kp N0     &trans
-                       &kp C_MUTE    &hm LCTRL LA(N1)  &hm LGUI LA(N2)   &hm LALT LA(N3)   &kp BSLH              &kp KP_SLASH     &hm LALT N1  &hm RGUI N2  &hm RCTRL N3  &kp KP_DOT
+                &trans &kp LC(LA(LG(F3)))    &kp LA(N7)        &kp LA(N8)        &kp LA(N9)        &kp KP_PLUS           &kp KP_MULTIPLY  &kp N7       &kp N8       &kp N9        &kp LS(N5) &trans
+                &trans &kp LC(LA(LG(F2)))    &kp LA(N4)        &kp LA(N5)        &kp LA(N6)        &kp KP_EQUAL          &kp KP_MINUS     &kp N4       &kp N5       &kp N6        &kp N0     &trans
+                       &kp LC(LA(LG(F1)))    &hm LCTRL LA(N1)  &hm LGUI LA(N2)   &hm LALT LA(N3)   &kp BSLH              &kp KP_SLASH     &hm LALT N1  &hm RGUI N2  &hm RCTRL N3  &kp KP_DOT
                                                                                     &trans &trans                &trans &trans
             >;
         };
