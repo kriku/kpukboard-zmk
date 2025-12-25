@@ -1,4 +1,4 @@
-if SHIELD_KPUK_RIGHT
+if SHIELD_KPUK_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "kpukboard"
