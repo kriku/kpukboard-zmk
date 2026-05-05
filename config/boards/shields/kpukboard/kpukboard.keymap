@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #define DEF_L 0
 #define SYM_L 1
@@ -115,15 +116,15 @@
         };
 
 /*     F F F F
- *   b 7 8 9 2   v u a d x   |
- *   b 4 5 6 1   v a a a x   |
+ *   b 7 8 9 2   v u a d x b |
+ *   b 4 5 6 1   v a a a x u |
  *   b 1 2 3 0   m p p n x   |
  */
 
         fn_layer {
             bindings = <
-                &trans &bt BT_SEL 0  &kp F7  &kp F8  &kp F9   &kp F12          &kp C_VOL_UP    &kp PG_UP   &kp UARW  &kp PG_DN   &trans &trans
-                &trans &bt BT_SEL 1  &kp F4  &kp F5  &kp F6   &kp F11          &kp C_VOL_DN    &kp LARW    &kp DARW  &kp RARW    &trans &trans
+                &trans &bt BT_SEL 0  &kp F7  &kp F8  &kp F9   &kp F12          &kp C_VOL_UP    &kp PG_UP   &kp UARW  &kp PG_DN   &trans &out OUT_USB
+                &trans &bt BT_SEL 1  &kp F4  &kp F5  &kp F6   &kp F11          &kp C_VOL_DN    &kp LARW    &kp DARW  &kp RARW    &trans &out OUT_BLE
                        &bt BT_CLR    &kp F1  &kp F2  &kp F3   &kp F10          &kp C_MUTE      &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans
                                                         &trans &trans                      &trans &trans
             >;
